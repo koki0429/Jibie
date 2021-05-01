@@ -1,0 +1,131 @@
+<?php
+
+/*
+|--------------------------------------------------------------------------
+| Validation Language Lines
+|--------------------------------------------------------------------------
+|
+| The following language lines contain the default error messages used by
+| the validator class. Some of these rules have multiple versions such
+| as the size rules. Feel free to tweak each of these messages here.
+|
+*/
+
+return [
+    'accepted'             => 'このメールアドレスを受け付けます。',
+    'active_url'           => 'これは有効なURLではありません。',
+    'after'                => 'これは:date年以降の日付でなければなりません。',
+    'after_or_equal'       => 'これは、:date以降の日付でなければなりません。',
+    'alpha'                => 'この分野が含まれます。',
+    'alpha_dash'           => 'このフィールドには、文字、数字、ダッシュ、下線のみを含めることができます。',
+    'alpha_num'            => 'このフィールドには文字と数字のみが含まれます。',
+    'array'                => 'この項目は配列である必要があります。',
+    'attached'             => 'このフィー',
+    'before'               => 'これは:dateより前の日付でなければなりません。',
+    'before_or_equal'      => 'これは、:dateより前の日付でなければなりません。',
+    'between'              => [
+        'array'   => 'This content must have between :min and :max items.',
+        'file'    => 'This file must be between :min and :max kilobytes.',
+        'numeric' => 'This value must be between :min and :max.',
+        'string'  => 'This string must be between :min and :max characters.',
+    ],
+    'boolean'              => 'この分野がtrueでなければなりませんまたはfalseです。',
+    'confirmed'            => '確認が一致しません。',
+    'date'                 => 'これは有効な日付ではありません。',
+    'date_equals'          => 'これは:date年に等しい日付でなければなりません。',
+    'date_format'          => 'これは形式:formatと一致しません。',
+    'different'            => 'この値は:otherとは異なる必要があります。',
+    'digits'               => 'これは:digits桁でなければなりません。',
+    'digits_between'       => 'これは:min :max桁でなければなりません。',
+    'dimensions'           => 'この画像の寸法が無効です。',
+    'distinct'             => 'このフィールドの値は重複しています。',
+    'email'                => '有効なメールアドレスである必要があります。',
+    'ends_with'            => 'これは、次のいずれかで終了する必要があります::values.',
+    'exists'               => '選択した値が無効です。',
+    'file'                 => '内容はファイルである必要があります。',
+    'filled'               => 'このフィールドには値が必要です。',
+    'gt'                   => [
+        'array'   => 'The content must have more than :value items.',
+        'file'    => 'The file size must be greater than :value kilobytes.',
+        'numeric' => 'The value must be greater than :value.',
+        'string'  => 'The string must be greater than :value characters.',
+    ],
+    'gte'                  => [
+        'array'   => 'The content must have :value items or more.',
+        'file'    => 'The file size must be greater than or equal :value kilobytes.',
+        'numeric' => 'The value must be greater than or equal :value.',
+        'string'  => 'The string must be greater than or equal :value characters.',
+    ],
+    'image'                => 'これは画像でなければなりません。',
+    'in'                   => '選択した値が無効です。',
+    'in_array'             => 'この値は:otherには存在しません。',
+    'integer'              => 'これは整数でなければなりません。',
+    'ip'                   => '有効なIPアドレスである必要があります。',
+    'ipv4'                 => '有効なIPv4アドレスである必要があります。',
+    'ipv6'                 => '有効なIPv6アドレスである必要があります。',
+    'json'                 => 'これは有効なJSON文字列である必要があります。',
+    'lt'                   => [
+        'array'   => 'The content must have less than :value items.',
+        'file'    => 'The file size must be less than :value kilobytes.',
+        'numeric' => 'The value must be less than :value.',
+        'string'  => 'The string must be less than :value characters.',
+    ],
+    'lte'                  => [
+        'array'   => 'The content must not have more than :value items.',
+        'file'    => 'The file size must be less than or equal :value kilobytes.',
+        'numeric' => 'The value must be less than or equal :value.',
+        'string'  => 'The string must be less than or equal :value characters.',
+    ],
+    'max'                  => [
+        'array'   => 'The content may not have more than :max items.',
+        'file'    => 'The file size may not be greater than :max kilobytes.',
+        'numeric' => 'The value may not be greater than :max.',
+        'string'  => 'The string may not be greater than :max characters.',
+    ],
+    'mimes'                => 'これは、タイプ:valuesのファイルである必要があります。',
+    'mimetypes'            => 'これは、タイプ:valuesのファイルである必要があります。',
+    'min'                  => [
+        'array'   => 'The value must have at least :min items.',
+        'file'    => 'The file size must be at least :min kilobytes.',
+        'numeric' => 'The value must be at least :min.',
+        'string'  => 'The string must be at least :min characters.',
+    ],
+    'multiple_of'          => '値は:valueの倍数でなければなりません',
+    'not_in'               => '選択した値が無効です。',
+    'not_regex'            => 'この形式は無効です。',
+    'numeric'              => 'これは数字でなければなりません。',
+    'password'             => 'パスワードが間違っている。',
+    'present'              => 'この項目は存在する必要があります。',
+    'prohibited'           => 'このフィールドは禁止です。',
+    'prohibited_if'        => 'このフィールドは、:otherが:valueの場合は禁止されています。',
+    'prohibited_unless'    => 'このフィールドは、:otherが:valuesでない限り禁止されています。',
+    'regex'                => 'この形式は無効です。',
+    'relatable'            => 'この分野でない場合に伴い資源です。',
+    'required'             => 'このフィールドは必須です。',
+    'required_if'          => 'このフィールドは、:otherが:valueの場合に必要です。',
+    'required_unless'      => 'このフィールドは、:otherが:valuesでない限り必須です。',
+    'required_with'        => 'このフィールドは、:valuesが存在する場合に必須です。',
+    'required_with_all'    => 'このフィールドは、:valuesが存在する場合に必要です。',
+    'required_without'     => 'このフィールドは、:valuesが存在しない場合に必須です。',
+    'required_without_all' => 'このフィールドは、:valuesのいずれも存在しない場合に必要です。',
+    'same'                 => 'このフィールドの値は、:otherの値と一致する必要があります。',
+    'size'                 => [
+        'array'   => 'The content must contain :size items.',
+        'file'    => 'The file size must be :size kilobytes.',
+        'numeric' => 'The value must be :size.',
+        'string'  => 'The string must be :size characters.',
+    ],
+    'starts_with'          => 'これは、次のいずれかから始める必要があります::values.',
+    'string'               => 'これは文字列でなければなりません。',
+    'timezone'             => '有効なゾーンである必要があります。',
+    'unique'               => 'これはすでに取られています。',
+    'uploaded'             => 'アップロードに失敗しました。',
+    'url'                  => 'この形式は無効です。',
+    'uuid'                 => 'これは有効なUUIDである必要があります。',
+    'custom'               => [
+        'attribute-name' => [
+            'rule-name' => 'custom-message',
+        ],
+    ],
+    'attributes'           => [],
+];
