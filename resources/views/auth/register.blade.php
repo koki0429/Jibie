@@ -15,6 +15,14 @@
             </div>
 
             <div class="mt-4">
+                <x-jet-label for="sex" value="{{ __('性別') }}" />
+                <select id="sex" class="block mt-1 w-full" name="sex" required style="opacity: 0.7;">
+                    <option value="1">男性</option>
+                    <option value="2">女性</option>
+                </select>
+            </div>
+
+            <div class="mt-4">
                 <x-jet-label for="email" value="{{ __('メールアドレス') }}" />
                 <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
             </div>
@@ -27,6 +35,36 @@
             <div class="mt-4">
                 <x-jet-label for="password_confirmation" value="{{ __('パスワード（確認用）') }}" />
                 <x-jet-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required autocomplete="new-password" />
+            </div>
+
+            <div class="mt-4">
+                <x-jet-label for="zipcode" value="{{ __('郵便番号(※ハイフン必要,半角)') }}" />
+                <x-jet-input id="zipcode" class="block mt-1 w-full" type="text" name="zipcode" :value="old('zipcode')" required />
+            </div>
+
+            <div class="mt-4">
+                <x-jet-label for="prefecture" value="{{ __('都道府県') }}" />
+                <x-jet-input id="prefecture" class="block mt-1 w-full" type="text" name="prefecture" :value="old('prefecture')" required />
+            </div>
+
+            <div class="mt-4">
+                <x-jet-label for="city" value="{{ __('市区町村') }}" />
+                <x-jet-input id="city" class="block mt-1 w-full" type="text" name="city" :value="old('city')" required />
+            </div>
+
+            <div class="mt-4">
+                <x-jet-label for="address" value="{{ __('町名・番地') }}" />
+                <x-jet-input id="address" class="block mt-1 w-full" type="text" name="address" :value="old('address')" required />
+            </div>
+
+            <div class="mt-4">
+                <x-jet-label for="phone" value="{{ __('電話番号(※ハイフン必要,半角)') }}" />
+                <x-jet-input id="phone" class="block mt-1 w-full" type="text" name="phone" :value="old('phone')" required />
+            </div>
+
+            <div class="mt-4">
+                <x-jet-label for="birth" value="{{ __('お誕生日') }}" />
+                <x-jet-input id="birth" class="block mt-1 w-full" type="date" name="birth" :value="old('birth')" required />
             </div>
 
             @if (Laravel\Jetstream\Jetstream::hasTermsAndPrivacyPolicyFeature())

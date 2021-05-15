@@ -1,10 +1,10 @@
 <x-jet-form-section submit="updateProfileInformation">
     <x-slot name="title">
-        {{ __('Profile Information') }}
+        {{ __('プロフィール情報') }}
     </x-slot>
 
     <x-slot name="description">
-        {{ __('Update your account\'s profile information and email address.') }}
+        {{ __('プロフィール情報を更新できます') }}
     </x-slot>
 
     <x-slot name="form">
@@ -54,26 +54,80 @@
 
         <!-- Name -->
         <div class="col-span-6 sm:col-span-4">
-            <x-jet-label for="name" value="{{ __('Name') }}" />
+            <x-jet-label for="name" value="{{ __('お名前') }}" />
             <x-jet-input id="name" type="text" class="mt-1 block w-full" wire:model.defer="state.name" autocomplete="name" />
             <x-jet-input-error for="name" class="mt-2" />
         </div>
 
+        <!-- Sex -->
+        <div class="col-span-6 sm:col-span-4">
+            <x-jet-label for="sex" value="{{ __('性別(変更不可)') }}" />
+            @if(Auth::user()->sex == 1)
+            <x-jet-input id="sex" type="text" class="mt-1 block w-full" value="男性" readonly="readonly" />
+            @else
+            <x-jet-input id="sex" type="text" class="mt-1 block w-full" value="女性" readonly="readonly" />
+            @endif
+            <x-jet-input-error for="sex" class="mt-2" />
+        </div>
+
         <!-- Email -->
         <div class="col-span-6 sm:col-span-4">
-            <x-jet-label for="email" value="{{ __('Email') }}" />
+            <x-jet-label for="email" value="{{ __('メールアドレス') }}" />
             <x-jet-input id="email" type="email" class="mt-1 block w-full" wire:model.defer="state.email" />
             <x-jet-input-error for="email" class="mt-2" />
+        </div>
+
+        <!-- Zipcode -->
+        <div class="col-span-6 sm:col-span-4">
+            <x-jet-label for="zipcode" value="{{ __('郵便番号') }}" />
+            <x-jet-input id="zipcode" type="text" class="mt-1 block w-full" wire:model.defer="state.zipcode" />
+            <x-jet-input-error for="zipcode" class="mt-2" />
+        </div>
+
+        <!-- Prefecture -->
+        <div class="col-span-6 sm:col-span-4">
+            <x-jet-label for="prefecture" value="{{ __('都道府県') }}" />
+            <x-jet-input id="prefecture" type="text" class="mt-1 block w-full" wire:model.defer="state.prefecture" />
+            <x-jet-input-error for="prefecture" class="mt-2" />
+        </div>
+
+        <!-- City -->
+        <div class="col-span-6 sm:col-span-4">
+            <x-jet-label for="city" value="{{ __('市区町村') }}" />
+            <x-jet-input id="city" type="text" class="mt-1 block w-full" wire:model.defer="state.city" />
+            <x-jet-input-error for="city" class="mt-2" />
+        </div>
+
+        <!-- Address -->
+        <div class="col-span-6 sm:col-span-4">
+            <x-jet-label for="address" value="{{ __('町名・番地') }}" />
+            <x-jet-input id="address" type="text" class="mt-1 block w-full" wire:model.defer="state.address" />
+            <x-jet-input-error for="address" class="mt-2" />
+        </div>
+
+        <!-- Phone -->
+        <div class="col-span-6 sm:col-span-4">
+            <x-jet-label for="phone" value="{{ __('電話番号') }}" />
+            <x-jet-input id="phone" type="text" class="mt-1 block w-full" wire:model.defer="state.phone" />
+            <x-jet-input-error for="phone" class="mt-2" />
+        </div>
+
+        <!-- Birth -->
+        <div class="col-span-6 sm:col-span-4">
+            <x-jet-label for="birth" value="{{ __('お誕生日(変更不可)') }}" />
+            <?php $birth =  date('Y年m月d日', strtotime(Auth::user()->birth)); ?>
+            <x-jet-input id="birth" type="text" class="mt-1 block w-full" value="<?php echo $birth; ?>" readonly="readonly" />
+            <x-jet-input-error for="birth" class="mt-2" />
         </div>
     </x-slot>
 
     <x-slot name="actions">
         <x-jet-action-message class="mr-3" on="saved">
-            {{ __('Saved.') }}
+            {{ __('保存しました') }}
         </x-jet-action-message>
 
         <x-jet-button wire:loading.attr="disabled" wire:target="photo">
-            {{ __('Save') }}
+            {{ __('保存する') }}
         </x-jet-button>
     </x-slot>
 </x-jet-form-section>

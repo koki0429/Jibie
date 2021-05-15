@@ -5,3 +5,11 @@ CREATE TABLE products(
     stock INT UNSIGNED DEFAULT 0,
     detail VARCAHR(1000)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+CREATE TABLE karts(
+    id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    product_id INT NOT NULL,
+    user_id INT,
+    quantity INT NOT NULL
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;

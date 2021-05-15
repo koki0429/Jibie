@@ -130,6 +130,9 @@ return [
     'attributes'           => [
         'name' => '名前',
         'email' => 'メールアドレス',
-        'password' => 'パスワード'
+        'password' => 'パスワード',
+        'current_password' => '現在のパスワード',
+        'zipcode' => '郵便番号',
+        'phone' => '電話番号'
     ],
 ];

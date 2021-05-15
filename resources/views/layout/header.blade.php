@@ -3,8 +3,15 @@
     <div class="l_header__top">
         <p class="l_header__titile">JIBIE STORE</p>
         <div class="l_header__userInfomation">
-            <a href="{{ route('dashboard') }}"><i class="far fa-address-card"></i></a>
-            <a href=""><i class="fas fa-cart-plus"></i></a>
+            @auth
+                <p class="p-loginName">{{ Auth::user()->name }}さん</p>
+                <a href="{{ route('profile.show') }}"><i class="far fa-address-card"></i></a>
+                <a href="{{ route('product.kart', ['user_id' => Auth::user()]) }}"><i class="fas fa-cart-plus"></i></a>
+            @else
+                <p class="p-loginName">ログインしてください。</p>
+                <a href="{{ route('login') }}"><i class="far fa-address-card"></i></a>
+                <a href="{{ route('login') }}"><i class="fas fa-cart-plus"></i></a>
+            @endauth
         </div>
     </div>
     <ul class="l_header__navlists">

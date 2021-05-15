@@ -6,9 +6,15 @@
 @section('pageJs')
 <script src="{{asset('/assets/javascript/index.blade.js')}}"></script>
 <script src="{{asset('/assets/javascript/button.blade.js')}}"></script>
+<script src="{{asset('/assets/javascript/flash.blade.js')}}"></script>
 @endsection
 @include('layout.header')
 @section('content')
+    @if(session('flash_message'))
+        <div class="flash_message attention">
+            <h2>{{ session('flash_message') }}</h2>
+        </div>
+    @endif
     <div class="c-button scroll_up" id="scroll_to_top">top</div>
     <div class="p-main_introduction">
         <h1 class="p-main_introductionTitle">宮崎の肉。</h1>
