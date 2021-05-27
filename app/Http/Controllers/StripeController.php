@@ -9,6 +9,7 @@ use App\Models\Product;
 use App\Models\Kart;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\ContactController;
 
 class StripeController extends Controller
 {
@@ -25,15 +26,20 @@ class StripeController extends Controller
                 'source' => $request->stripeToken
             ));
 
+            $sendMail = app()->make('App\Http\Controllers\ContactController');
+            $sendMail->sendAfterSettlement($request);
+
             $charge = Charge::create(array(
                 'customer' => $customer->id,
                 'amount' => $request->sum,
                 'currency' => 'jpy'
             ));
 
-            $karts = Kart::where('user_id', $request->user_id)->get();
+            $karts = Kart::where('user_id', $request->user_id)->where('date', '')->get();
             foreach($karts as $kart){
                 $kart->del_flag = 1;
+                $kart->date = $request->date;
+                $kart->time = $request->time;
                 $kart->save();
                 $quantity = $kart->quantity;
                 $product = Product::where('id', $kart->product_id)->first();

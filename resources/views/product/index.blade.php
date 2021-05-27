@@ -62,15 +62,6 @@
         <section class="product">
             <?php $i = 0; ?>
             @foreach($products as $product)
-            @if($i == 0 || $i % 3 == 0)
-                <a class="p-product_anker productFix" href="/product/{{$product->id}}">
-                    <img src="{{asset('storage/' . $product->image)}}" class="c-img_product" alt="商品画像">
-                    <p class="p_name">{{$product->name}}</p>
-                    <?php $price = number_format($product->price); ?>
-                    <p class="p_price">¥<?php echo $price; ?></p>
-                </a>
-                <?php $i++; ?>
-            @else
                 <a class="p-product_anker" href="/product/{{$product->id}}">
                     <img src="{{asset('storage/' . $product->image)}}" class="c-img_product" alt="商品画像">
                     <p class="p_name">{{$product->name}}</p>
@@ -78,7 +69,6 @@
                     <p class="p_price">¥<?php echo $price; ?></p>
                 </a>
                 <?php $i++; ?>
-            @endif
             @endforeach
         </section>
     </div>

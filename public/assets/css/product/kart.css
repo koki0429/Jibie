@@ -19,6 +19,13 @@
 .p-sumValue {
     text-align: center;
     margin-top: 20px;
+    border-bottom: 1px solid #808080;
+}
+
+.p-deriveryPrice {
+    font-size: 20px;
+    font-family: serif;
+    margin-bottom: 10px;
 }
 
 .p-sum {
@@ -101,22 +108,47 @@
 }
 
 .p-stripeDetails {
-    text-align: left;
-}
-
-.p-kartAddress {
-    width: 600px;
-    margin-bottom: 30px;
+    text-align: center;
 }
 
 .p-stripeDetail {
     font-size: 20px;
     font-family: serif;
     margin-top: 10px;
+    display: inline-block;
 }
 
 .p-kartLabel {
-    display: inline-block;
-    margin-top: 20px;
+    border-bottom: 1px solid #000;
 }
 
+.p-profileButtom {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #808080;
+}
+
+.p-profileEdit {
+    width: 200px;
+}
+
+.p-deriveryDate {
+    margin-bottom: 30px;
+}
+
+.p-deriveryTitle {
+    font-size: 20px;
+    font-family: serif;
+    display: inline-block;
+    border-bottom: 1px solid #000;
+    margin-bottom: 10px;
+}
+
+.p-derivery {
+    width: 130px;
+    font-size: 20px;
+}

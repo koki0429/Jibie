@@ -1,6 +1,8 @@
 @charset "UTF-8";
 @import url('/assets/css/component/image.css');
 @import url('/assets/css/component/button.css');
+@import url('/assets/css/component/button.css');
+@import url('/assets/css/component/flash.css');
 
 .p-productShow {
     display: flex;

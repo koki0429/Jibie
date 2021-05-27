@@ -45,6 +45,11 @@ class ProductController extends Controller
     }
 
     public function kartCreate(Request $request){
+        if(!empty($request->notproduct)){
+            session()->flash('flash_messageShow', '在庫不足のため、カートに入れることができません。');
+            return $this->show($request->product_id);
+        }
+
         $judge = Kart::where('user_id', $request->user_id)->where('product_id', $request->product_id)->where('del_flag', '0')->first();
         if(empty($request->user_id)){
             $products = Product::all();
@@ -87,8 +92,8 @@ class ProductController extends Controller
             $kart->delete();
         }
 
-        $searchs = Kart::get()->where('user_id', $request->user_id)->where('del_flag', '0');
-        if(empty($searchs)){
+        $searchs = Kart::where('user_id', $request->user_id)->where('del_flag', '0')->get();
+        if(empty($searchs[0])){
             return $this->index();
         }else{
             foreach($searchs as $search){

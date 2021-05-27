@@ -32,17 +32,10 @@
     margin-bottom: 30px;
 }
 
-.p-main_cookBox {
-    margin-left: 100px;
-}
-
-.p-main_cookBox:first-child {
-    margin-left: 0;
-}
-
 .p-main_cookContents {
     display: flex;
-    justify-content: center;
+    display: wrap;
+    justify-content: space-around;
 }
 
 .p-main_cookName {
@@ -63,25 +56,20 @@
 }
 
 .product {
-    width: 50%;
+    width: 800px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: wrap;
     margin: 0 auto;
 }
 
 .p-product_anker {
     margin-bottom: 80px;
-    margin-left: 50px;
     text-align: center;
     line-height: 1.5em;
     font-family: serif;
     text-decoration: none;
     color: #000;
-}
-
-.productFix {
-    margin-left: 0;
 }
 
 .p_name {

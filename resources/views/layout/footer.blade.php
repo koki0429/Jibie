@@ -4,9 +4,9 @@
     <div class="l_footer-desc">
         <div class="l_access">
             <h3 class="l_accessTitle" id="jump_access">ACCSESS</h3>
-            <p class="l_accessdesc">株式会社○○○○○○</p>
-            <p class="l_accessdesc">TELL:0000-0000-0000</p>
-            <p class="l_accessdesc">宮崎県児湯郡新富町三納代6336</p>
+            <p class="l_accessdesc">ジビエ 黒木</p>
+            <p class="l_accessdesc">TELL&FAX:(0983)33-5059</p>
+            <p class="l_accessdesc">宮崎県児湯郡新富町大字上富田6336-2</p>
         </div>
         <div class="l_contact">
             <h3 class="l_contactTitle">CONTACT</h3>
