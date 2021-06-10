@@ -2,6 +2,7 @@
 @section('title', 'トップページ')
 @section('pageCss')
 <link rel="stylesheet" href="/assets/css/product/index.css">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minumum-scale=1.0">
 @endsection
 @section('pageJs')
 <script src="{{asset('/assets/javascript/index.blade.js')}}"></script>

@@ -45,6 +45,7 @@ class ContactController extends Controller
                 ->withInput($inputs);
         }else{
             \Mail::to($inputs['email'])->send(new ContactSendmail($inputs));
+            \Mail::to('japanesebrothers@gmail.com')->send(new ContactSendmail($inputs));
 
             $request->session()->regenerateToken();
 
@@ -57,7 +58,7 @@ class ContactController extends Controller
         $karts = Kart::where('user_id', $user_id)->where('del_flag', '0')->get();
         $products = [];
         foreach($karts as $kart){
-            $products[] = Product::where('id', $kart->product_id)->get();
+            $products[] = Product::where('id', $kart->product_id)->where('stock', '>', 0)->get();
         }
         $user = User::where('id', $user_id)->first();
 
@@ -72,6 +73,7 @@ class ContactController extends Controller
         ];
 
         \Mail::to($user['email'])->send(new SettlementSendmail($datas));
+        \Mail::to('japanesebrothers@gmail.com')->send(new SettlementSendmail($datas));
 
         $request->session()->regenerateToken();
 

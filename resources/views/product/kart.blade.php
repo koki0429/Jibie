@@ -14,6 +14,7 @@
         </div>
     @endif
     <div class="karts">
+        <?php $sums[] = 0; ?>
         @if(!empty($products))
             <?php $i = 0; ?>
             @foreach($products as $key => $value)
@@ -34,9 +35,17 @@
                                 {{ Form::submit('更新', ['name' => 'update', 'class' => 'p-kartButton p-rctBtn']) }}
                                 {{ Form::submit('削除', ['name' => 'delete', 'class' => 'p-kartButton p-rctBtn', 'onclick' => "return confirm('本当に削除しますか?')"]) }}
                             </div>
+                            @if($product->stock == 0)
+                                <p style="color:red; margin-top:20px; margin-left:30px">
+                                    ※こちらの商品は在庫切れのため、注文できません。<br>
+                                    &nbsp&nbsp&nbsp決済後、カート内から自動で削除されます。
+                                </p>
+                            @endif
                         </div>
                     </div>
-                    <?php $sums[] = $product->price * $quantity[$i]; ?>
+                    @if($product->stock > 0)
+                        <?php $sums[] = $product->price * $quantity[$i]; ?>
+                    @endif
                     <?php $i++; ?>
                     {{ Form::hidden('user_id', Auth::user()->id) }}
                     {{ Form::hidden('product_id', $product->id) }}
@@ -44,8 +53,13 @@
                 @endforeach
             @endforeach
             <div class="p-sumValue">
-                <?php $sum = array_sum($sums); ?>
-                <?php $sum = $sum + 1000; ?>
+                @if($sums !== 0)
+                    <?php $sum = array_sum($sums); ?>
+                    <!-- 手数料を取る場合のみ以下を使用する -->
+                    <?php //$sum = $sum + 1000; ?>
+                @else
+                    <?php $sum = 0; ?>
+                @endif
                 <p class="p-deriveryPrice">小計 : ¥<?php echo $sum; ?>円</p>
                 <p class="p-deriveryPrice">配達料・手数料 : ¥0円</p>
                 <p class="p-sum">合計値 : ¥ <?php echo number_format($sum); ?></p>

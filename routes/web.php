@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', 'App\Http\Controllers\ProductController@index');
 Route::get('contact', 'App\Http\Controllers\ContactController@index')->name('contact.index');
 Route::post('contact/confirm', 'App\Http\Controllers\ContactController@confirm')->name('contact.confirm');
 Route::post('contact/thanks', 'App\Http\Controllers\ContactController@send')->name('contact.send');

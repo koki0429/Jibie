@@ -5,73 +5,79 @@
 @import url('/assets/css/javascript/load_up.css');
 @import url('/assets/css/javascript/scroll_up.css');
 
-.p-main_introduction {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+@media screen and (min-width: 479px){
+    .p-main_introduction {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .p-main_introductionTitle {
+        font-size: 50px;
+        display: inline-block;
+        font-family: serif;
+    }
+
+    .p-main_introductionText {
+        line-height: 4ch;
+        display: inline-block;
+        margin-top: 50px;
+        font-size: 20px;
+        font-family: serif;
+    }
+
+    .c_title {
+        font-size: 40px;
+        font-family: serif;
+        margin-left: 40px;
+        margin-bottom: 30px;
+    }
+
+    .p-main_cookContents {
+        display: flex;
+        display: wrap;
+        justify-content: space-around;
+    }
+
+    .p-main_cookName {
+        text-align: center;
+        font-size: 20px;
+        font-family: serif;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    .p-main_cookDesc {
+        font-family: serif;
+        text-align: center;
+    }
+
+    .products {
+        margin-top: 100px;
+    }
+
+    .product {
+        width: 800px;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+
+    .p-product_anker {
+        margin-bottom: 80px;
+        text-align: center;
+        line-height: 1.5em;
+        font-family: serif;
+        text-decoration: none;
+        color: #000;
+    }
+
+    .p_name {
+        margin-top: 10px;
+    }
 }
 
-.p-main_introductionTitle {
-    font-size: 50px;
-    display: inline-block;
-    font-family: serif;
-}
+@media screen and (max-width: 479px) {
 
-.p-main_introductionText {
-    line-height: 4ch;
-    display: inline-block;
-    margin-top: 50px;
-    font-size: 20px;
-    font-family: serif;
-}
-
-.c_title {
-    font-size: 40px;
-    font-family: serif;
-    margin-left: 40px;
-    margin-bottom: 30px;
-}
-
-.p-main_cookContents {
-    display: flex;
-    display: wrap;
-    justify-content: space-around;
-}
-
-.p-main_cookName {
-    text-align: center;
-    font-size: 20px;
-    font-family: serif;
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-
-.p-main_cookDesc {
-    font-family: serif;
-    text-align: center;
-}
-
-.products {
-    margin-top: 100px;
-}
-
-.product {
-    width: 800px;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin: 0 auto;
-}
-
-.p-product_anker {
-    margin-bottom: 80px;
-    text-align: center;
-    line-height: 1.5em;
-    font-family: serif;
-    text-decoration: none;
-    color: #000;
-}
-
-.p_name {
-    margin-top: 10px;
 }
