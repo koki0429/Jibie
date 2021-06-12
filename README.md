@@ -6,10 +6,10 @@
 
 You can purchase of gibier that flesh meets raised in miyazaki.
 This site's visual is simple, so it is easy to purchase of meets.
-
-![top-1](/assets/images/top-1.jpeg)
-![top-2](/assets/images/top-2.jpeg)
-![top-3](/assets/images/top-3.jpeg)
+/public/assets/images/top-1.jpeg
+![top-1](/public/assets/images/top-1.jpeg)
+![top-2](/public/assets/images/top-2.jpeg)
+![top-3](/public/assets/images/top-3.jpeg)
 
 # Features
 
