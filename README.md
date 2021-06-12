@@ -1,3 +1,50 @@
+# JIBIE STORE
+
+"JIBIE STORE" is a online shopping site to purchase of gibier.
+
+# DEMO
+
+You can purchase of gibier that flesh meets raised in miyazaki.
+This site's visual is simple, so it is easy to purchase of meets.
+
+![top-1](/assets/images/top-1.jpeg)
+![top-2](/assets/images/top-2.jpeg)
+![top-3](/assets/images/top-3.jpeg)
+
+# Features
+
+This site is using [stripe](https://stripe.com/jp?utm_campaign=paid_brand-JP_ja_Search_Brand_Stripe-1608207349&utm_medium=cpc&utm_source=google&ad_content=305767026167&utm_term=aud-491317518397:kwd-295607662702&utm_matchtype=e&utm_adposition=&utm_device=c&gclid=Cj0KCQjwk4yGBhDQARIsACGfAevNYqgPlWwqwtvad6zoSrMp1oqAAmXnDXJ_IPky-oxHiJTPMUqs5ksaAjN-EALw_wcB),so it is easy to manage sales.
+
+Image of dishes are posted on this site, so you have an easy image of cooking.
+
+# Requirement
+
+* php 7.3.24
+* Laravel Framework 8.35.1
+
+Enviroments under [Composer for macbook](https://getcomposer.org/)
+
+# Installation
+
+* [php download](https://www.php.net/downloads)
+
+* Laravel download
+
+```zsh
+$ composer global require "laravel/installer=~1.1"
+```
+
+# Note
+
+I don't test environments under Linux and windows.
+
+This site isn't yet on the server.
+
+# Auther
+
+* Koki Kuroki
+* Twitter : https://twitter.com/home
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
@@ -60,3 +107,5 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+Thank you!
